@@ -8,6 +8,10 @@ int main() {
 
     do {
         tentativas = 0;
+
+        printf("\n===============================\n");
+        printf("    🎯 JOGO DA ADIVINHAÇÃO 🎯    \n");
+        printf("===============================\n\n");
         
         printf("\nQual o nivel de dificuldade ?\n");
         printf("1 - Facil\n");
@@ -43,11 +47,11 @@ int main() {
             tentativas++;
 
             if(palpite < numeroAleatorio) {
-                printf("Dica: é MAIOR!\n");
+                printf("Dica: é MAIOR! 📈\n");
             } else if(palpite > numeroAleatorio) {
-                printf("Dica: é MENOR!\n");
+                printf("Dica: é MENOR! 📉\n");
             } else {
-                printf("Parabéns! você acertou em %d tentativas.\n", tentativas);
+                printf("🎉Parabéns! você acertou em %d tentativas.\n", tentativas);
             }
         } while(palpite != numeroAleatorio);
 
@@ -56,7 +60,7 @@ int main() {
 
     } while(jogarNovamente == 's' || jogarNovamente == 'S');
 
-    printf("Obrigado por jogar!\n");
+    printf("Obrigado por jogar! 👋\n");
 
     return 0;
 }
