@@ -4,13 +4,13 @@
 
 int main() {
 
-    int nivel, valorMaximo;
+    int nivel, valorMaximo, numeroAleatorio;
     
-    print("Qual o nivel de dificuldade ?\n");
-    print("1 - Facil\n");
-    print("2 - Medio\n");
-    print("3 - Dificil\n");
-    print("4 - Imposivel\n");
+    printf("Qual o nivel de dificuldade ?\n");
+    printf("1 - Facil\n");
+    printf("2 - Medio\n");
+    printf("3 - Dificil\n");
+    printf("4 - Imposivel\n");
     scanf("%d", &nivel);
 
     switch(nivel) {
@@ -30,6 +30,12 @@ int main() {
             printf("Nível inválido. Definindo como Medio.\n");
             valorMaximo = 100;
     }
+
+    srand(time(NULL));
+    numeroAleatorio = rand() % valorMaximo + 1;
+
+    printf("O valor maximo e: %d\n", valorMaximo);
+    printf("O numero aleatorio e: %d\n", numeroAleatorio);
 
     return 0;
 }
