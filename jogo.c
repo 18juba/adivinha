@@ -4,7 +4,7 @@
 
 int main() {
 
-    int nivel, valorMaximo, numeroAleatorio;
+    int nivel, valorMaximo, numeroAleatorio, palpite, tentativas = 0;
     
     printf("Qual o nivel de dificuldade ?\n");
     printf("1 - Facil\n");
@@ -34,8 +34,19 @@ int main() {
     srand(time(NULL));
     numeroAleatorio = rand() % valorMaximo + 1;
 
-    printf("O valor maximo e: %d\n", valorMaximo);
-    printf("O numero aleatorio e: %d\n", numeroAleatorio);
+        do {
+        printf("Digite seu palpite (entre 1 e %d): ", valorMaximo);
+        scanf("%d", &palpite);
+        tentativas++;
+
+        if(palpite < numeroAleatorio) {
+            printf("Dica: é MAIOR!\n");
+        } else if(palpite > numeroAleatorio) {
+            printf("Dica: é MENOR!\n");
+        } else {
+            printf("Parabéns! você acertou em %d tentativas.\n", tentativas);
+        }
+    } while(palpite != numeroAleatorio);
 
     return 0;
 }
