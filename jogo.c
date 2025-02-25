@@ -51,7 +51,15 @@ int main() {
             } else if(palpite > numeroAleatorio) {
                 printf("Dica: é MENOR! 📉\n");
             } else {
-                printf("🎉Parabéns! você acertou em %d tentativas.\n", tentativas);
+                if (tentativas == 1) {
+                    printf("😲 CRAQUE! você acertou de primeira!\n");
+                } else if (tentativas <= 5) {
+                    printf("🔥 Jogou muito! você acertou em apenas %d tentativas!\n", tentativas);
+                } else if (tentativas <= 10) {
+                    printf("👍 Bom jogo! você conseguiu em apenas %d tentativas!\n", tentativas);
+                } else {
+                    printf("🎉Parabéns! você acertou em %d tentativas.\n", tentativas);
+                }
             }
         } while(palpite != numeroAleatorio);
 
