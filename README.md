@@ -28,4 +28,4 @@ Para instalar o jogo, siga os passos abaixo:
    ```
 2. O computador escolherá um número aleatório dentro de um intervalo (por exemplo, de 1 a 100 no nível médio).
 3. Tente adivinhar o número! O jogo vai te dar dicas se o seu palpite é muito alto ou muito baixo.
-4. Continue adivinhando até acertar o número! Boa sorte! 🍀
+4. Continue adivinhando até acertar o número! Boa sorte!!! 🍀
